@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 
-class Home extends Component {
+import CarouselBoxHk from "../Components/CarouselBoxHk";
+import {Carousel} from "react-bootstrap";
+
+export class Home extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+                <CarouselBoxHk/>
         );
     }
 }

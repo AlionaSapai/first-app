@@ -51,10 +51,10 @@ export default class Header extends Component{
             </Navbar>
                 <Router >
                     <Routes>
-                        <Route path="/" elemnt={<Home/>}/>
-                        <Route path="/aboute" elemnt={<About/>}/>
-                        <Route path="/contacts" elemnt={<Contacts/>}/>
-                        <Route path="/blog" elemnt={<Blog/>}/>
+                        <Route path="/" element={<Home />}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/contacts" element={<Contacts/>}/>
+                        <Route path="/blog" element={<Blog/>}/>
                     </Routes>
                 </Router>
             </>
