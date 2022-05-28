@@ -16,6 +16,15 @@ import Contacts from "../Pages/Contacts";
 import About from "../Pages/About";
 import Blog from "../Pages/Blog";
 
+import Developers from "./Developers";
+import Naturalists from "./Naturalists";
+import Marketers from "./Marketers";
+
+import Postfirst from "./Postfirst";
+import Postsecond from "./Postsecond";
+import Postthird from "./Postthird";
+import Postfourth from "./Postfourth";
+
 
 
 export default function Header(){
@@ -74,10 +83,10 @@ export default function Header(){
     }, [emailError, passwordError])
 
         return (
-            <>
+            <div>
             <Navbar fixed= "top" collapseOnSelect expand="md" bg="dark" variant="dark" >
                 <Container>
-                    <Navbar.Brand href="/">
+                    <Navbar.Brand href="/home">
                         <img
                             src={logo}
                             height="30"
@@ -89,7 +98,7 @@ export default function Header(){
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto" >
-                            <Nav.Link href="/"> Home </Nav.Link>
+                            <Nav.Link href="/home"> Home </Nav.Link>
                             <Nav.Link href="/about"> About us </Nav.Link>
                             <Nav.Link href="/contacts"> Contacts </Nav.Link>
                             <Nav.Link href="/blog"> Blog </Nav.Link>
@@ -98,15 +107,14 @@ export default function Header(){
                             <FormControl
                                 type="text"
                                 placeholder="Search"
-                                className="me-5"
+                                className="me-2"
                                 />
                             <Button variant="outline-info"> Search </Button>
                         </Form>
                     </Navbar.Collapse>
                 </Container>
-            </Navbar>
-
                 <Button className="me-2" onClick={handleShow}>Login</Button>
+            </Navbar>
 
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
@@ -156,13 +164,20 @@ export default function Header(){
 
                 <Router>
                     <Routes>
-                        <Route path="/" element={<Home />}/>
+                        <Route path="/home" element={<Home />}/>
                         <Route path="/about" element={<About/>}/>
                         <Route path="/contacts" element={<Contacts/>}/>
                         <Route path="/blog" element={<Blog/>}/>
+                        <Route path="/developers" element={<Developers/>}/>
+                        <Route path="/naturalists" element={<Naturalists/>}/>
+                        <Route path="/marketers" element={<Marketers/>}/>
+                        <Route path="/postfirst" element={<Postfirst/>}/>
+                        <Route path="/postsecond" element={<Postsecond/>}/>
+                        <Route path="/postthird" element={<Postthird/>}/>
+                        <Route path="/postfourth" element={<Postfourth/>}/>
                     </Routes>
                 </Router>
-            </>
+            </div>
         )
     }
 

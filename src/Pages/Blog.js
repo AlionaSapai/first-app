@@ -1,117 +1,94 @@
 import React, {Component} from 'react';
-import {Row, Col, Card, ListGroup} from "react-bootstrap";
+import {Row, Col, Card, ListGroup, Button} from "react-bootstrap";
+
+
 
 class Blog extends Component {
-    render() {
+      render() {
         return (
             <div>
                 <Row>
                     <Col md="9">
-                        <div className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                <img
-                                width={150}
-                                height={150}
-                                className="mr-3"
-                                src="https://donpion.ua/static/media/uploads/product/One_flower/rose-import/kahala/.thumbnails/kahala_.jpg/kahala_-0x700.jpg"
-                                alt="rose"/>
+                        <div className="row">
+                            <div className="col">
+                                <Card className="m-4 text-center" bg="light" border="primary">
+                                    <Card.Img
+                                        variant="top"
+                                        height='190px'
+                                        src="https://donpion.ua/static/media/uploads/product/One_flower/rose-import/kahala/.thumbnails/kahala_.jpg/kahala_-0x700.jpg"
+                                    />
+                                    <Card.Body>
+                                        <Card.Title>ТРОЯНДА КАХАЛА</Card.Title>
+                                            <Card.Text>
+                                                Кахала
+                                            </Card.Text>
+                                        <Button variant="primary"
+                                                href={'/postfirst'}
+                                                >Детальніше
+                                        </Button>
+                                    </Card.Body>
+                                 </Card>
                             </div>
-                            <div className="flex-grow-1 ms-3">
-                                <h5> ТРОЯНДА КАХАЛА</h5>
-                                <p>
-                                    Троянда Кахала - півоновидна троянда, яка заробила у тих хто дарує і отримує квіти в подарунок - високу репутацію.
-                                    Розу Кахала часто порівнюють з балетною примою - у неї пишна пачка і витончена ніжка. Як примхлива дівчина,
-                                    так і даний сорт троянд дуже чутливий. Вирощують троянду Кахала виключно в розплідниках, тому що цей сорт троянд дуже вибагливий
-                                    і навіть найменше відхилення флори і середовища від норми несе смерть для розкішної персикової квітки.
-                                    Рослина має назву на честь найбільш благополучного району Гаваї.
-                                    Флористи відзначають особливий відтінок троянд Кахала. Сорт славиться двобарвними квітами - ніжна вуаль дорогого шампанського
-                                    плавно перетікає в насичено-помаранчевий.
-                                    Через щільності махрових бутонів троянди відносять до півоновидної групи. Пелюсток дуже багато. Вони оксамитові і свіжого персикового відтінку.
-                                    Саме завдяки унікальному кольору, троянда особливо цінується у флористів.
-                                    Бутони великі, аромату не мають. Вони розташовуються на верхівках стебел (висотою до 40-90 см) з шипами.
-                                    У флористів вважається, що букет з трояндою Кахала символізує міцну дружбу. Тому, їх найчастіше дарують на дні народження,
-                                    і по іншим знаменним датам друзям і близьким людям.
-                                    Привабливий вигляд троянд Кахала дозволяє використовувати їх і для оформлення інтер'єру. Барвисті композиції за
-                                    участю цих дивовижних троянд вигідно прикрасять затишний інтер'єр будинку або офісу.
-                                    Квіти прекрасно виглядають в невисокій, прозорій вазі.
-                                    Троянда Кахала ніжна і чуттєва квітка, але при регулярній зміні води на чисту - квітка довше збереже свою первозданну свіжість.
-                                    Джерело: https://donpion.ua/shop/product/rose-varieties-kahala/
-                                </p>
-                            </div>
-                        </div>
 
-                        <div className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                <img
-                                    width={150}
-                                    height={150}
-                                    className="mr-3"
-                                    src="https://matla-flowers.com.ua/image/cache/webp/catalog/foto-tovarov/128/Giacint_Woodstock.1-1000x1000.webp"
-                                    alt="flowers"/>
+                            <div className="col">
+                                <Card className="m-4 text-center" bg="light" border="primary">
+                                    <Card.Img
+                                        variant="top"
+                                        height='190px'
+                                        src="https://matla-flowers.com.ua/image/cache/webp/catalog/foto-tovarov/128/Giacint_Woodstock.1-1000x1000.webp"
+                                    />
+                                    <Card.Body>
+                                        <Card.Title>Гіацинт Woodstock</Card.Title>
+                                        <Card.Text>
+                                            Woodstock
+                                        </Card.Text>
+                                        <Button variant="primary"
+                                                href={'/postsecond'}
+                                                >Детальніше
+                                        </Button>
+                                    </Card.Body>
+                                </Card>
                             </div>
-                            <div className="flex-grow-1 ms-3">
-                                <h5> Гіацинт Woodstock </h5>
-                                <p>
-                                    Гіацинт малинового кольору стане саме тим яскравим елементом вашого саду, який подарує сонячний настрій та створить теплу атмосферу.
-                                    Висаджуючи його в саду або на клумбі варто дотримуватись відстані між рослинами у 15-20 см.
-                                    Висаджують гіацинт в період з вересня по листопад. Садити квітку потрібно в місцевості, що добре освітлена сонцем.
-                                    Зацвітає гіацинт уже в березні - на початку квітня.
-                                    Якщо ви обираєте для себе варіант висадки квітки вдома, то варто пам’ятати, що цвіте рослина при температурі від +10 до +20 градусів.
-                                    При вищій температурі квітка зацвіте раніше і період її цвітіння скоротиться. При оптимальній температурі гіацинт Woodstock буде цвісти від 2-х до 4-х тижнів.
-                                    Джерело: https://matla-flowers.com.ua/bulbs/hyacinth/giacint-woodstock
-                                </p>
-                            </div>
-                        </div>
 
-                        <div className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                <img
-                                    width={150}
-                                    height={150}
-                                    className="mr-3"
-                                    src="https://vseroste.com.ua/uploads/shop/products/main/10d33b9c-afca-11ea-af9f-9f4d08b8be87.jpg"
-                                    alt="flowers"/>
-                            </div>
-                            <div className="flex-grow-1 ms-3">
-                                <h5> Крокус Ruby Giant</h5>
-                                <p>
-                                    Ботанічний крокус Ruby Giant з градієнтним забарвленням пелюсток, від білого у серцевини до фіолетового,
-                                    у кінчиків виглядає дуже ніжно і яскраво. Розпускаються квіти в перші ж дні весни, коли сходить сніг
-                                    і з'являються перші проталини, тому садити цибулини найкраще на найтепліші і освітлені місця в саду.
-                                    Висота квітки 8-10 см, діаметр 4 см.
-                                    Джерело: https://vseroste.com.ua/krokus-ruby-giant-5-sht
-                                </p>
-                            </div>
-                        </div>
 
-                        <div className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                <img
-                                    width={150}
-                                    height={150}
-                                    className="mr-3"
-                                    src="https://dobrodar.ua/uploads/cache/Products/Product_images_40122/814799_w508.jpg"
-                                    alt="flowers"/>
+                            <div className="col">
+                                <Card className="m-4 text-center" bg="light" border="primary">
+                                    <Card.Img
+                                        variant="top"
+                                        height='190px'
+                                        src="https://vseroste.com.ua/uploads/shop/products/main/10d33b9c-afca-11ea-af9f-9f4d08b8be87.jpg"
+                                    />
+                                    <Card.Body>
+                                        <Card.Title>Крокус Ruby Giant</Card.Title>
+                                        <Card.Text>
+                                            Ruby Giant.
+                                        </Card.Text>
+                                        <Button variant="primary"
+                                                href={'/postthird'}
+                                                >Детальніше
+                                        </Button>
+                                    </Card.Body>
+                                </Card>
                             </div>
-                            <div className="flex-grow-1 ms-3">
-                                <h5> Хризантема Ясода Ред</h5>
-                                <p>
-                                    Хризантема Ясода Ред — многолетнее растение из семейства Астровых. Сорт входит в
-                                    самую популярную группу горшечных мелкоцветковых хризантем. Кустарник
-                                    генетически компактный, обладает сферической формой, формирует аккуратные куполы
-                                    темно-зеленой листвы, вырастает в высоту до 50 сантиметров. Хризантема – одна из
-                                    самых позднецветущих культур, повсеместно распространенных на приусадебных и дачных
-                                    участках. С начала октября и до первого снега с морозами хризантема Ясода Ред сплошь
-                                    покрывается бесчисленным количеством полумахровых цветков насыщенного темно-красного
-                                    цвета, достигающих в диаметре 3-4 сантиметра. Их пышное цветение источает
-                                    горьковато-полынный аромат. В настоящее время хризантемы  находятся на самом
-                                    пике садовой моды и внимание к ним только увеличивается. Происходит это благодаря их
-                                    необыкновенным декоративным качествам. У хризантем  шарообразная форма куста и
-                                    обильное цветение с очень плотным расположением цветков на стеблях. Они великолепно
-                                    подходят для выращивания в вазонах, горшках, балконных ящиках или по краям клумб,
-                                    где они смогут наиболее полно проявить все свои достоинства. Идеальный шар!
-                                    Джерело: https://dobrodar.ua/catalog/mnogoletniki-kornevishcha/hrizantema/hrizantemy-gorshechnye-melkocvetkovye/hrizantema-asoda-red-jasoda-red.html
-                                </p>
+
+                            <div className="col">
+                                <Card className="m-4 text-center" bg="light" border="primary">
+                                    <Card.Img
+                                        variant="top"
+                                        height='190px'
+                                        src="https://dobrodar.ua/uploads/cache/Products/Product_images_40122/814799_w508.jpg"
+                                    />
+                                    <Card.Body>
+                                        <Card.Title> Хризантема Ясода Ред</Card.Title>
+                                        <Card.Text>
+                                            Ясода Ред
+                                        </Card.Text>
+                                        <Button variant="primary"
+                                                href={'/postfourth'}
+                                                >Детальніше
+                                        </Button>
+                                    </Card.Body>
+                                </Card>
                             </div>
                         </div>
                     </Col>

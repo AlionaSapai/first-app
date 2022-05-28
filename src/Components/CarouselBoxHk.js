@@ -14,7 +14,7 @@ class CarouselBoxHk extends Component {
         return (
         <Carousel>
 
-            <Carousel.Item>
+            <Carousel.Item style={{'height': '350px'}}>
                 <img
                     className= "d-block w-100"
                     src={Fusciello}
@@ -25,7 +25,7 @@ class CarouselBoxHk extends Component {
                 </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item>
+            <Carousel.Item style={{'height': '350px'}}>
                 <img
                     className= "d-block w-100"
                     src={Medeiros}
@@ -36,7 +36,7 @@ class CarouselBoxHk extends Component {
                 </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item>
+            <Carousel.Item style={{'height': '350px'}}>
                 <img
                     className= "d-block w-100"
                     src={Keawnet}
@@ -47,7 +47,7 @@ class CarouselBoxHk extends Component {
                 </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item>
+            <Carousel.Item style={{'height': '350px'}}>
                 <img
                     className= "d-block w-100"
                     src={Boltneva}
@@ -58,7 +58,7 @@ class CarouselBoxHk extends Component {
                 </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item>
+            <Carousel.Item style={{'height': '350px'}}>
                 <img
                     className= "d-block w-100"
                     src={Iriser}

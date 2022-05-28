@@ -3,26 +3,31 @@ import React, {Component} from 'react';
 import CarouselBoxHk from "../Components/CarouselBoxHk";
 import {Button, Card, Container,} from "react-bootstrap";
 
+
+
 export class Home extends Component {
+
     render() {
         return (
             <div>
                 <CarouselBoxHk/>
                 <Container>
-                    <h2 className="text-center m-4">Our team</h2>
+                    <h2 className="text-center m-4">Наша команда</h2>
                     <div className="row">
                         <div className="col">
                            <Card className="m-4 text-center" bg="light" border="primary">
                                <Card.Img
                                    variant="top"
-                                   src="https://qwertify.io/wp-content/uploads/2021/04/Team.jpeg"
+                                   src="https://images.pexels.com/photos/6624218/pexels-photo-6624218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                    />
                                <Card.Body>
-                                   <Card.Title>Developers</Card.Title>
+                                   <Card.Title>Ідейні вдохновителі</Card.Title>
                                    <Card.Text>
-                                       Команда 1
+                                       Разом- ми сила!
                                    </Card.Text>
-                                   <Button variant="primary">About team</Button>
+                                   <Button variant="primary"
+                                           href={'/developers'}
+                                   >Про вдохновителів</Button>
                                </Card.Body>
                            </Card>
                         </div>
@@ -31,14 +36,16 @@ export class Home extends Component {
                             <Card className="m-4 text-center" bg="light" border="primary">
                                 <Card.Img
                                     variant="top"
-                                    src="https://cdn.vox-cdn.com/thumbor/Ndb49Uk3hjiquS041NDD0tPDPAs=/0x169:1423x914/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/7342855/microsoftteams.0.jpg"
+                                    src="https://images.pexels.com/photos/5409733/pexels-photo-5409733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                 />
                                 <Card.Body>
-                                    <Card.Title>Природознавці</Card.Title>
+                                    <Card.Title>Флористи</Card.Title>
                                     <Card.Text>
-                                        Команда 2
+                                        Нас надихає природа
                                     </Card.Text>
-                                    <Button variant="primary">About team</Button>
+                                    <Button variant="primary"
+                                            href={'/naturalists'}>
+                                        Про флористів</Button>
                                 </Card.Body>
                             </Card>
                         </div>
@@ -47,20 +54,25 @@ export class Home extends Component {
                             <Card className="m-4 text-center" bg="light" border="primary">
                                 <Card.Img
                                     variant="top"
-                                    src="https://www.kv.by/sites/default/files/pictures/userpictures/2019/11/29/2359/foto6_1.jpg"
+                                    src="https://images.pexels.com/photos/6764320/pexels-photo-6764320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                 />
                                 <Card.Body>
                                     <Card.Title>Маркетологи</Card.Title>
                                     <Card.Text>
-                                        Команда 3
+                                        Ми знаємо, що Вам потрібно
                                     </Card.Text>
-                                    <Button variant="primary">About team</Button>
+                                    <Button variant="primary"
+                                            href={'/marketers'}
+                                    >Про маркетологів
+                                    </Button>
                                 </Card.Body>
                             </Card>
+
                         </div>
 
                     </div>
                 </Container>
+
             </div>
 
         );

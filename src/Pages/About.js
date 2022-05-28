@@ -12,53 +12,53 @@ class About extends Component {
                         <Col sm={3}>
                             <Nav variant="pills" className="flex-column mt-2">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Desing</Nav.Link>
+                                    <Nav.Link eventKey="first">Дизайн</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="second">Team</Nav.Link>
+                                    <Nav.Link eventKey="second">Команда</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="third">Program</Nav.Link>
+                                    <Nav.Link eventKey="third">Композиції</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="fourth">Frameworks</Nav.Link>
+                                    <Nav.Link eventKey="fourth">Інтер'єр</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="fifth">Library</Nav.Link>
+                                    <Nav.Link eventKey="fifth">Екстер'єр</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </Col>
                         <Col sm={9}>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
+                                    <p className=" text-center"> <h4>Ми працюємо з кожним замовленням вкладаючи частинку душі </h4></p>
                                     <img className="d-block w-100"
-                                     src="https://i.pinimg.com/originals/aa/f0/69/aaf069dc6de7618a63de784b70ad4370.jpg"
+                                     src="https://images.pexels.com/photos/3766221/pexels-photo-3766221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                      alt="picture one"/>
-                                    <p> lorem </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
+                                    <p className=" text-center"> <h4>І все таки разом ми - сила!</h4></p>
                                     <img className="d-block w-100"
-                                         src="https://jstemplate.net/wp-content/uploads/2021/05/digiency-cover.jpg"
+                                         src="https://images.pexels.com/photos/5409735/pexels-photo-5409735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                          alt="picture two"/>
-                                    <p> lorem </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="third">
+                                    <p className=" text-center"> <h4>Краса обов'язково врятує світ</h4></p>
                                     <img className="d-block w-100"
-                                         src="https://s3-alpha.figma.com/hub/file/858291939/14dda654-9bf1-47a5-ba66-904aa3003c6e-cover.png"
+                                         src="https://images.pexels.com/photos/4466544/pexels-photo-4466544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                          alt="picture three"/>
-                                    <p> lorem </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fourth">
+                                    <p className=" text-center"> <h4>І в будинку значно затишніше</h4></p>
                                     <img className="d-block w-100"
-                                         src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg"
+                                         src="https://images.pexels.com/photos/3775156/pexels-photo-3775156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                          alt="picture fourth"/>
-                                    <p> lorem </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fifth">
+                                    <p className="text-center"><h4>Прикрасимо так, щоб обов'язково хотілось завітати</h4></p>
                                     <img className="d-block w-100"
-                                         src="https://programminglibrarian.org/sites/default/files/partnerships_2.jpg"
+                                         src="https://images.pexels.com/photos/302588/pexels-photo-302588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                          alt="picture fifth"/>
-                                    <p> lorem </p>
                                 </Tab.Pane>
                             </Tab.Content>
                         </Col>
