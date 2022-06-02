@@ -1,113 +1,45 @@
-import React, {Component} from 'react';
-import {Row, Col, Card, ListGroup, Button} from "react-bootstrap";
+import React, {useState} from 'react';
+import {Button} from "react-bootstrap";
+import PostList from "../Components/UI/input/PostList";
+import MyInput from "../Components/UI/input/MyInput";
+import classes from "../Components/UI/button/Mybutton.module.css";
 
+export default function Blog() {
+    const [posts, setPosts] = useState([
+        {id: 1, title: 'JavaScript', body: 'Description'},
+        {id: 2, title: 'JavaScript', body: 'Description'},
+        {id: 3, title: 'JavaScript', body: 'Description'},
+    ])
+    const [post, setPost] = useState({title: '', body: ''})
 
-
-class Blog extends Component {
-      render() {
-        return (
-            <div>
-                <Row>
-                    <Col md="9">
-                        <div className="row">
-                            <div className="col">
-                                <Card className="m-4 text-center" bg="light" border="primary">
-                                    <Card.Img
-                                        variant="top"
-                                        height='190px'
-                                        src="https://donpion.ua/static/media/uploads/product/One_flower/rose-import/kahala/.thumbnails/kahala_.jpg/kahala_-0x700.jpg"
-                                    />
-                                    <Card.Body>
-                                        <Card.Title>ТРОЯНДА КАХАЛА</Card.Title>
-                                            <Card.Text>
-                                                Кахала
-                                            </Card.Text>
-                                        <Button variant="primary"
-                                                href={'/postfirst'}
-                                                >Детальніше
-                                        </Button>
-                                    </Card.Body>
-                                 </Card>
-                            </div>
-
-                            <div className="col">
-                                <Card className="m-4 text-center" bg="light" border="primary">
-                                    <Card.Img
-                                        variant="top"
-                                        height='190px'
-                                        src="https://matla-flowers.com.ua/image/cache/webp/catalog/foto-tovarov/128/Giacint_Woodstock.1-1000x1000.webp"
-                                    />
-                                    <Card.Body>
-                                        <Card.Title>Гіацинт Woodstock</Card.Title>
-                                        <Card.Text>
-                                            Woodstock
-                                        </Card.Text>
-                                        <Button variant="primary"
-                                                href={'/postsecond'}
-                                                >Детальніше
-                                        </Button>
-                                    </Card.Body>
-                                </Card>
-                            </div>
-
-
-                            <div className="col">
-                                <Card className="m-4 text-center" bg="light" border="primary">
-                                    <Card.Img
-                                        variant="top"
-                                        height='190px'
-                                        src="https://vseroste.com.ua/uploads/shop/products/main/10d33b9c-afca-11ea-af9f-9f4d08b8be87.jpg"
-                                    />
-                                    <Card.Body>
-                                        <Card.Title>Крокус Ruby Giant</Card.Title>
-                                        <Card.Text>
-                                            Ruby Giant.
-                                        </Card.Text>
-                                        <Button variant="primary"
-                                                href={'/postthird'}
-                                                >Детальніше
-                                        </Button>
-                                    </Card.Body>
-                                </Card>
-                            </div>
-
-                            <div className="col">
-                                <Card className="m-4 text-center" bg="light" border="primary">
-                                    <Card.Img
-                                        variant="top"
-                                        height='190px'
-                                        src="https://dobrodar.ua/uploads/cache/Products/Product_images_40122/814799_w508.jpg"
-                                    />
-                                    <Card.Body>
-                                        <Card.Title> Хризантема Ясода Ред</Card.Title>
-                                        <Card.Text>
-                                            Ясода Ред
-                                        </Card.Text>
-                                        <Button variant="primary"
-                                                href={'/postfourth'}
-                                                >Детальніше
-                                        </Button>
-                                    </Card.Body>
-                                </Card>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col md="3">
-                        <h5 className="text-center mt-5">Категорії</h5>
-                        <Card>
-                            <ListGroup variant="flush" >
-                                <ListGroup.Item>категорія 1</ListGroup.Item>
-                                <ListGroup.Item>категорія 2</ListGroup.Item>
-                                <ListGroup.Item>категорія 3</ListGroup.Item>
-                                <ListGroup.Item>категорія 4</ListGroup.Item>
-                                <ListGroup.Item>категорія 5</ListGroup.Item>
-                            </ListGroup>
-                        </Card>
-                    </Col>
-                </Row>
-            </div>
-        );
+    const addNewPost = (e) => {
+      e.preventDefault()
+      setPosts([...posts, {...post, id: Date.now()}])
+      setPost({title: '', body: ''})
     }
-}
+    console.log(posts);
+    console.log(post);
 
-export default Blog;
+    return(
+
+        <div className="App">
+            <PostList posts={posts} title="Пости про квіти"/>
+
+            <form>
+                <MyInput
+                    value={post.title}
+                    onChange={e =>setPost({...post, title: e.target.value})}
+                    type="text"
+                    placeholder="Назва поста"/>
+                <MyInput
+                    value={post.body}
+                    onChange={e => setPost({...post, body: e.target.value})}
+                    type="text"
+                    placeholder="Опис поста"/>
+                <Button onClick={addNewPost}
+                className={classes.MyBtn}
+                >Створити пост</Button>
+            </form>
+        </div>
+    )
+};
