@@ -1,45 +1,57 @@
-import React, {useState} from 'react';
-import {Button} from "react-bootstrap";
+import React, {Component, useRef, useState} from 'react';
+//import {Button} from "react-bootstrap";
+import {createEvent} from "@testing-library/react"
 import PostList from "../Components/UI/input/PostList";
-import MyInput from "../Components/UI/input/MyInput";
-import classes from "../Components/UI/button/Mybutton.module.css";
+import PostForm from "../Components/UI/input/PostForm";
+import MySelect from "../Components/UI/select/MySelect";
 
-export default function Blog() {
+function Blog() {
     const [posts, setPosts] = useState([
         {id: 1, title: 'JavaScript', body: 'Description'},
         {id: 2, title: 'JavaScript', body: 'Description'},
         {id: 3, title: 'JavaScript', body: 'Description'},
     ])
-    const [post, setPost] = useState({title: '', body: ''})
 
-    const addNewPost = (e) => {
-      e.preventDefault()
-      setPosts([...posts, {...post, id: Date.now()}])
-      setPost({title: '', body: ''})
-    }
-    console.log(posts);
-    console.log(post);
+    const [selectedSort, setSelectedSort] = useState()
+
+
+    const createPost = (newPost) => {
+        setPosts ([...posts, newPost])
+   }
+
+
+      const removePost = (post) =>{
+        setPosts(posts.filter(p=> p.id !== post.id))
+   }
+
+   const sortPosts = (sort) => {
+       setSelectedSort(sort)
+       setPosts([...posts].sort((a,b) => a[sort].localeCompare(b[sort])))
+   }
 
     return(
+        <div className="Blog">
+            <PostForm create= {createPost}/>
+            <hr style={{margin:'15px 0'}}/>
+            <div>
+                <MySelect
+                    value={selectedSort}
+                    onChange={sort => sortPosts(sort)}
+                    defaultValue="Сортування"
+                    options={[
+                        {value: 'title', name: 'За назвою'},
+                        {value: 'body', name: 'За описом'},
+                    ]}
+                    />
+            </div>
+            {posts.length !== 0
+            ?
+            <PostList remove={removePost} posts={posts} title="Пости про квіти"/>
+            :
+            <h1 style={{textAlign: 'center'}}>Пости не знайдено!</h1>
+            }
 
-        <div className="App">
-            <PostList posts={posts} title="Пости про квіти"/>
-
-            <form>
-                <MyInput
-                    value={post.title}
-                    onChange={e =>setPost({...post, title: e.target.value})}
-                    type="text"
-                    placeholder="Назва поста"/>
-                <MyInput
-                    value={post.body}
-                    onChange={e => setPost({...post, body: e.target.value})}
-                    type="text"
-                    placeholder="Опис поста"/>
-                <Button onClick={addNewPost}
-                className={classes.MyBtn}
-                >Створити пост</Button>
-            </form>
         </div>
-    )
-};
+    );
+}
+export default Blog;
